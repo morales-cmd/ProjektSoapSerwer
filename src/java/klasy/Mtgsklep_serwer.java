@@ -19,8 +19,10 @@ import javax.jws.soap.SOAPBinding;
 @SOAPBinding(style = SOAPBinding.Style.RPC)
 public interface Mtgsklep_serwer {
         @WebMethod Magazyn zwroc_magazyn();
-        @WebMethod Potw_zamowienia zloz_zamowienie(ArrayList<Stan> zamowienie,Konto konto);
+        @WebMethod Potw_zamowienia zloz_zamowienie(String login, String haslo)throws  Exception;;
         @WebMethod Konto zaloguj(String login,String haslo) throws  Exception;
+        @WebMethod Konto dodaj_do_koszyka(String login, String haslo, String nazwa_karty, int liczba) throws  Exception;
+        @WebMethod Konto usun_z_koszyka(String login, String haslo, String nazwa_karty) throws  Exception;
     //update image to server
     
 }

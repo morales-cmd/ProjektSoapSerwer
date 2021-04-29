@@ -49,6 +49,15 @@ public class Magazyn {
         }
         throw new Exception("brak elemntu");
     }
+    public Karta zwroc_karte(String name) throws Exception
+    {
+        for (int i=0;i<lista_st.size();i++)
+        {
+            if(name.equals(lista_st.get(i).karta.nazwa))
+                return lista_st.get(i).karta;
+        }
+        throw new Exception("brak elemntu");
+    }
     
     void weryfikuj_zamowienie(ArrayList<Stan> zamowienie, Konto konto) throws Exception {
         float kwota=0;

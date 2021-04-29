@@ -40,18 +40,19 @@ public class Mtgsklep_serwerImpl implements Mtgsklep_serwer{
         return this.magazyn;
     }
     @Override
-    public Potw_zamowienia zloz_zamowienie( ArrayList<Stan> zamowienie, Konto konto)
+    public Potw_zamowienia zloz_zamowienie( String login,String haslo) throws Exception
     {
-        
+        Konto konto=zaloguj(login,haslo);
         try {
-            magazyn.weryfikuj_zamowienie(zamowienie, konto);
+            magazyn.weryfikuj_zamowienie(konto.koszyk, konto);
         } catch (Exception ex) {
            return new Potw_zamowienia(false,ex.getMessage());
            
         }
           
         try {
-             Potw_zamowienia potw=finalizuj_zamowienie(zamowienie,konto);
+             Potw_zamowienia potw=finalizuj_zamowienie(konto.koszyk,konto);
+             konto.oproznij_koszyk();
              return potw;
         } catch (Exception ex) {
             return new Potw_zamowienia(false,ex.getMessage());
@@ -78,4 +79,23 @@ public class Mtgsklep_serwerImpl implements Mtgsklep_serwer{
             throw new Exception ("niepoprawny login i/lub hasło");
         }
     }
+
+    @Override
+    public Konto dodaj_do_koszyka(String login, String haslo, String nazwa_karty, int liczba) throws Exception{
+        Konto k= zaloguj(login,haslo);
+        Stan stan=magazyn.zwroc_stan(nazwa_karty);
+        
+        k.dodaj_do_koszyka(stan.karta,stan.cena,liczba);
+        return k;
+        
+    }
+
+    public Konto usun_z_koszyka(String login, String haslo, String nazwa_karty) throws Exception {
+        Konto k= zaloguj(login,haslo);
+        Stan stan=magazyn.zwroc_stan(nazwa_karty);
+        
+        k.usun_z_koszyka(stan.karta);
+        return k; //To change body of generated methods, choose Tools | Templates.
+    }
+    
 }
