@@ -53,6 +53,7 @@ public class Mtgsklep_serwerImpl implements Mtgsklep_serwer{
         try {
              Potw_zamowienia potw=finalizuj_zamowienie(konto.koszyk,konto);
              konto.oproznij_koszyk();
+             System.out.println("klasy.Mtgsklep_serwerImpl.zloz_zamowienie()");
              return potw;
         } catch (Exception ex) {
             return new Potw_zamowienia(false,ex.getMessage());
@@ -89,7 +90,7 @@ public class Mtgsklep_serwerImpl implements Mtgsklep_serwer{
         return k;
         
     }
-
+    @Override
     public Konto usun_z_koszyka(String login, String haslo, String nazwa_karty) throws Exception {
         Konto k= zaloguj(login,haslo);
         Stan stan=magazyn.zwroc_stan(nazwa_karty);
