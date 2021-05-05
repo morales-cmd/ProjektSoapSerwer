@@ -1,0 +1,43 @@
+\documentclass[11pt]{article}   % list options between brackets
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[polish]{babel}
+\usepackage{amsmath}
+\usepackage{blindtext}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{graphicx} % Allows including images
+%\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+% type user-defined commands here
+
+\begin{document}
+	\begin{titlepage}
+	\title{%
+		Projekt Soap Web Service\\
+		\large Sklep internetowy z kartami do gry Magic: The Gathering\\
+		Specyfikacja Wejście-Wyjście\\
+	wersja 1.0}
+	\author{Paweł Marczak i Łukasz Kosmaty}         % type author(s) between braces
+	\date{\today}    % type date between braces
+	\maketitle
+	\end{titlepage}
+	\tableofcontents
+	\section{Wstęp}     % section 1.1
+	%\subsection{History}       % subsection 1.1.1
+	\subsection{Przeznaczenie}
+	Celem zaprojektowanego web service-u jest automatyzacja procesu składania zamówień na karty w sklepie sprzedającym single (karty na sztuki) do gry Magic: The Gathering.\par W obecnej wersji, web service pozwala na przegląd magazynu sklepu (narazie zdefiniowanego statycznie), zalogowanie na istniejące w bazie konto (w tym momencie bez możliwości otwartej rejestacji), uzupełnienie koszyka zamówienia przez użytkownika, złożenie zamówienia (z kontrolą poprawności zamówienia i odpowiednią aktualizacją stanu magazynu) oraz wydrukowanie potwierdzenia zamówienia w formacie pdf. By obslugiwać serwis można korzystać z przygotowanego przez nas klienta obsługiwanego za pośrednictwem html.\par Serwis został stworzony z myślą o dalszym rozwoju. Przykładowymi ścieżkami rozwoju są: integracja z zewnętrznymi bazami danych, możliwość otwartej rejetracji, szyfrowanie przesyłanych komunikatów SOAP (np. przy użyciu standardu SSL), integracja z zewnętrznymi systemami płatniczymi.
+	\subsection{Zakres}
+Dokument opisuje standardy sieciowe, według których zbudowana jest usługa oraz
+prezentuje przykładowy sposób jej używania.
+\section{Specyfikacja usługi Web Service}
+
+	
+
+
+
+\end{document}

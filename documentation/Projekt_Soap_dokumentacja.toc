@@ -1,0 +1,5 @@
+\babel@toc {polish}{}
+\contentsline {section}{\numberline {1}Wstęp}{1}{}%
+\contentsline {subsection}{\numberline {1.1}Przeznaczenie}{1}{}%
+\contentsline {subsection}{\numberline {1.2}Zakres}{1}{}%
+\contentsline {section}{\numberline {2}Specyfikacja usługi Web Service}{1}{}%

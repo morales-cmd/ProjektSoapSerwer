@@ -1,17 +1,17 @@
 Drannith_Stinger
-Kolor: czerwony; set: Ikoria, Lair of Behemoths; rzadkość: common
-Drannith_Stinger.png
+Kolor: czerwony; set: Ikoria, Lair of Behemoths; rzadkosc: common
+Drannith_Stinger.jpg
 70
 0.89
 
 Extinction_Event
-Kolor: czarny; set: Ikoria, Lair of Behemoths; rzadkość: rare
+Kolor: czarny; set: Ikoria, Lair of Behemoths; rzadkosc: rare
 Extinction_Event.png
 21
 6.83
 
 Gemrazer
-Kolor: zielony; set: Ikoria, Lair of Behemoths; rzadkość: rare
+Kolor: zielony; set: Ikoria, Lair of Behemoths; rzadkosc: rare
 Gemrazer.png
 18
 5.44
@@ -24,7 +24,7 @@ Luminous_Broodmoth.png
 
 Ominous_Seas
 Kolor: niebieski; set: Ikoria, Lair of Behemoths; rzadkosc: uncommon
-Luminous_Broodmoth.png
+Ominous_Seas.png
 43
 2.02
 

@@ -18,13 +18,13 @@ public class Dane_sklepu {
     public String NIP;
     public String wlasciciel;
     public Dane_sklepu(){
-    this.nazwa="Znowu trzeba w magica grać.Magiaaa!";
+    this.nazwa="Znowu trzeba w magica grac.Magiaaa!";
     this.adres="Boboli 10";
     this.NIP="68830299831";
     this.miasto="Bialystok";
     this.kod_pocztowy="15-431";
-    this.email="Magiaaa!";
-    this.wlasciciel="Paweł Roszkowski";
+    this.email="Magiaaa@gmail.com";
+    this.wlasciciel="Pawel Roszkowski";
 
 }
     

@@ -51,8 +51,9 @@ public class Konto {
         }
 
     void dodaj_do_koszyka(Karta karta,float cena, int liczba) {
-        try{Stan pom=this.zwroc_stan(karta.nazwa);
-            pom.na_stanie+=liczba;
+        try {Stan pom=this.zwroc_stan(karta.nazwa);
+            pom.na_stanie=liczba;
+            pom.wartosc_razem=liczba*pom.cena;
                 }
         catch(Exception ex){
             Stan stan=new Stan(karta,liczba,cena);

@@ -26,7 +26,7 @@ import javax.xml.ws.handler.soap.SOAPHandler;
 import javax.xml.ws.handler.soap.SOAPMessageContext;
 import javax.xml.ws.soap.SOAPFaultException;
 
-public class MacAddressValidatorHandler implements SOAPHandler<SOAPMessageContext>{
+public class HeaderHandler implements SOAPHandler<SOAPMessageContext>{
 
    @Override
    public boolean handleMessage(SOAPMessageContext context) {
@@ -49,7 +49,9 @@ public class MacAddressValidatorHandler implements SOAPHandler<SOAPMessageContex
                 //throw exception
                 generateSOAPErrMessage(soapMsg, "No SOAP header.");
          }
-        
+        else{
+        System.out.print(soapHeader);
+        }
 
              //Get client mac address from SOAP header
          

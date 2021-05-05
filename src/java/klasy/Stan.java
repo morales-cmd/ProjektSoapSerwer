@@ -13,11 +13,13 @@ public class Stan {
     public Karta karta;
     public int na_stanie;
     public float cena;
+    public float wartosc_razem;
     public Stan(Karta karta,int na_stanie, float cena)
     {
         this.karta=karta;
         this.na_stanie=na_stanie;
         this.cena=cena;
+        this.wartosc_razem=cena*na_stanie;
     }
     
 }

@@ -9,6 +9,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.jws.HandlerChain;
 import javax.jws.WebService;
 import javax.xml.ws.BindingType;
 import javax.xml.ws.soap.MTOM;
@@ -20,7 +21,8 @@ import javax.xml.ws.soap.SOAPBinding;
  */
 @MTOM
 
-@WebService()
+@WebService
+@HandlerChain(file="handler-chain.xml")
 @BindingType(value = SOAPBinding.SOAP11HTTP_MTOM_BINDING)
 
 public class Mtgsklep_serwerImpl implements Mtgsklep_serwer{
@@ -31,7 +33,7 @@ public class Mtgsklep_serwerImpl implements Mtgsklep_serwer{
     public Mtgsklep_serwerImpl() throws FileNotFoundException{
     this.magazyn=new Magazyn();
     this.uzytkownicy=new Lista_kont();
-    
+    this.dane_sklepu=new Dane_sklepu();
     }
             
     @Override
@@ -60,7 +62,7 @@ public class Mtgsklep_serwerImpl implements Mtgsklep_serwer{
         }
         
     }
-    public Potw_zamowienia finalizuj_zamowienie(ArrayList<Stan> zamowienie, Konto konto) throws Exception{
+    private Potw_zamowienia finalizuj_zamowienie(ArrayList<Stan> zamowienie, Konto konto) throws Exception{
         float kwota= magazyn.aktualizuj_magazyn(zamowienie);
         uzytkownicy.aktualizuj_stan_konta(kwota*(-1),konto.login,konto.haslo);
         Potw_zamowienia potw=new Potw_zamowienia(true,"zamowienie potwierdzone");

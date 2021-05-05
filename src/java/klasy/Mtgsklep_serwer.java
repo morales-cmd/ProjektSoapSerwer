@@ -7,6 +7,7 @@ package klasy;
 
 import java.awt.Image;
 import java.util.ArrayList;
+import javax.jws.HandlerChain;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
@@ -16,6 +17,7 @@ import javax.jws.soap.SOAPBinding;
  * @author kuba2108
  */
 @WebService
+@HandlerChain(file="handler-chain.xml")
 @SOAPBinding(style = SOAPBinding.Style.RPC)
 public interface Mtgsklep_serwer {
         @WebMethod Magazyn zwroc_magazyn();
