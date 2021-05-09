@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
 import javax.xml.namespace.QName;
+import javax.xml.soap.Name;
 import javax.xml.soap.Node;
 import javax.xml.soap.SOAPBody;
 import javax.xml.soap.SOAPConstants;
@@ -20,12 +21,17 @@ import javax.xml.soap.SOAPEnvelope;
 import javax.xml.soap.SOAPException;
 import javax.xml.soap.SOAPFault;
 import javax.xml.soap.SOAPHeader;
+import javax.xml.soap.SOAPHeaderElement;
 import javax.xml.soap.SOAPMessage;
+import javax.xml.ws.BindingType;
 import javax.xml.ws.handler.MessageContext;
 import javax.xml.ws.handler.soap.SOAPHandler;
 import javax.xml.ws.handler.soap.SOAPMessageContext;
+import javax.xml.ws.soap.MTOM;
+import javax.xml.ws.soap.SOAPBinding;
 import javax.xml.ws.soap.SOAPFaultException;
-
+@MTOM
+@BindingType(value = SOAPBinding.SOAP11HTTP_MTOM_BINDING)
 public class HeaderHandler implements SOAPHandler<SOAPMessageContext>{
 
    @Override
@@ -50,9 +56,10 @@ public class HeaderHandler implements SOAPHandler<SOAPMessageContext>{
                 generateSOAPErrMessage(soapMsg, "No SOAP header.");
          }
         else{
-        System.out.print(soapHeader);
+        //System.out.print(soapHeader);
+        System.out.print(soapEnv.getHeader());
         }
-
+        
              //Get client mac address from SOAP header
          
                 
@@ -66,6 +73,38 @@ public class HeaderHandler implements SOAPHandler<SOAPMessageContext>{
         }
             
         }
+//    else{
+//        try{
+//        SOAPMessage soapMsg = context.getMessage();
+//            SOAPEnvelope soapEnv = soapMsg.getSOAPPart().getEnvelope();
+//            SOAPHeader soapHeader = soapEnv.getHeader();
+//                
+//            //if no header, add one
+//            if (soapHeader == null){
+//            	soapHeader = soapEnv.addHeader();
+//            }
+//
+//            //get mac address
+//            Dane_sklepu dk= new Dane_sklepu();
+//            //add a soap header, name as "mac address"
+//            QName qname = new QName("http://25.76.141.122:8080/ProjektSoapSerwer/", "Dane_firmy");
+//            SOAPHeaderElement soapHeaderElement = soapHeader.addHeaderElement(qname);
+//
+//            //soapHeaderElement.setActor(SOAPConstants.URI_SOAP_ACTOR_NEXT);
+//            soapHeaderElement.addTextNode(dk.nazwa+"\n"+dk.NIP+"\n"+dk.adres+"\n"+dk.kod_pocztowy+" "+dk.miasto+"\n"+dk.wlasciciel);
+//            soapMsg.saveChanges();
+//            //tracking
+//           //soapMsg.writeTo(System.out);
+//
+//                 
+//       }catch(SOAPException e){
+//        System.err.println(e);
+//       }
+////        catch(IOException e){
+////        System.err.println(e);
+////       }
+//        
+//    }
 
       //continue other handler chain
       return true;

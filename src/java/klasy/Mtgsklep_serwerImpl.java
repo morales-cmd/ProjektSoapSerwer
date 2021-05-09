@@ -5,22 +5,23 @@
  */
 package klasy;
 
+import java.awt.Image;
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.jws.HandlerChain;
 import javax.jws.WebService;
 import javax.xml.ws.BindingType;
 import javax.xml.ws.soap.MTOM;
 import javax.xml.ws.soap.SOAPBinding;
 
-/**
- *
- * @author kuba2108
- */
-@MTOM
 
+
+@MTOM
 @WebService
 @HandlerChain(file="handler-chain.xml")
 @BindingType(value = SOAPBinding.SOAP11HTTP_MTOM_BINDING)
@@ -68,8 +69,7 @@ public class Mtgsklep_serwerImpl implements Mtgsklep_serwer{
         Potw_zamowienia potw=new Potw_zamowienia(true,"zamowienie potwierdzone");
         potw.dane_sklepu=this.dane_sklepu;
         potw.kwota=kwota;
-        potw.kwota_netto=(float) (kwota/1.23);
-        potw.podatek=potw.kwota-potw.kwota_netto;
+        potw.kwota_netto=(float) Math.round(kwota/1.23*100)/100;
         return potw;
         
     }
@@ -100,5 +100,6 @@ public class Mtgsklep_serwerImpl implements Mtgsklep_serwer{
         k.usun_z_koszyka(stan.karta);
         return k; //To change body of generated methods, choose Tools | Templates.
     }
+
     
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:klas="http://klasy/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <klas:dodaj_do_koszyka>
+         <!--Optional:-->
+         <arg0>Lukasz</arg0>
+         <!--Optional:-->
+         <arg1>Kosmaty</arg1>
+         <!--Optional:-->
+         <arg2>Extinction_Event</arg2>
+         <arg3>5</arg3>
+      </klas:dodaj_do_koszyka>
+   </soapenv:Body>
+</soapenv:Envelope>

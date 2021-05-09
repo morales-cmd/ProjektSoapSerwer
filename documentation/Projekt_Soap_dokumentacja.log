@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2021.2.2)  5 MAY 2021 17:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2021.2.2)  8 MAY 2021 20:04
 entering extended mode
 **./Projekt_Soap_dokumentacja.tex
 (Projekt_Soap_dokumentacja.tex
@@ -209,14 +209,47 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks24
 \@floatcapt=\box50
 )
-(C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
+(C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+
+(C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+
+(C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+)) (C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
 \wrapoverhang=\dimen160
 \WF@size=\dimen161
 \c@WF@wrappedlines=\count286
 \WF@box=\box51
 \WF@everypar=\toks25
 Package: wrapfig 2003/01/31  v 3.6
+) (C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count287
+\lst@gtempboxa=\box52
+\lst@token=\toks26
+\lst@length=\count288
+\lst@currlwidth=\dimen162
+\lst@column=\count289
+\lst@pos=\count290
+\lst@lostspace=\dimen163
+\lst@width=\dimen164
+\lst@newlines=\count291
+\lst@lineno=\count292
+\lst@maxwidth=\dimen165
+
+(C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count293
+\lst@skipnumbers=\count294
+\lst@framebox=\box53
 )
+(C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
 (C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -231,14 +264,11 @@ fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
-
-(C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
-))
-\Gin@req@height=\dimen162
-\Gin@req@width=\dimen163
 )
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 18
+\Gin@req@height=\dimen166
+\Gin@req@width=\dimen167
+)
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 20
 .
  (C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -246,44 +276,70 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 (C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count287
-\l__pdf_internal_box=\box52
-) (Projekt_Soap_dokumentacja.aux)
+\l__kernel_color_stack_int=\count295
+\l__pdf_internal_box=\box54
+) (Projekt_Soap_dokumentacja.aux
+
+LaTeX Warning: Label `code:sample' multiply defined.
+
+
+LaTeX Warning: Label `code:sample' multiply defined.
+
+
+LaTeX Warning: Label `code:sample' multiply defined.
+
+
+LaTeX Warning: Label `code:sample' multiply defined.
+
+
+LaTeX Warning: Label `code:sample' multiply defined.
+
+
+LaTeX Warning: Label `code:sample' multiply defined.
+
+
+LaTeX Warning: Label `code:sample' multiply defined.
+
+
+LaTeX Warning: Label `code:sample' multiply defined.
+
+)
 \openout1 = `Projekt_Soap_dokumentacja.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 (C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count288
-\scratchdimen=\dimen164
-\scratchbox=\box53
-\nofMPsegments=\count289
-\nofMParguments=\count290
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count291
-\MPscratchDim=\dimen165
-\MPnumerator=\count292
-\makeMPintoPDFobject=\count293
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count296
+\scratchdimen=\dimen168
+\scratchbox=\box55
+\nofMPsegments=\count297
+\nofMParguments=\count298
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count299
+\MPscratchDim=\dimen169
+\MPnumerator=\count300
+\makeMPintoPDFobject=\count301
+\everyMPtoPDFconversion=\toks28
 )
 (C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -291,35 +347,36 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
+\c@lstlisting=\count302
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
-7.
+9.
  (C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-7.
+9.
 
 (C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-27.
+29.
 
 (C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-27.
+29.
 
 (C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 27.
+(Font)              <12> on input line 29.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 27.
+(Font)              <8> on input line 29.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 27.
+(Font)              <6> on input line 29.
  [1
 
 {C:/Users/kuba2/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
@@ -330,31 +387,80 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \tf@toc=\write3
 \openout3 = `Projekt_Soap_dokumentacja.toc'.
 
-
-Overfull \hbox (2.17041pt too wide) in paragraph at lines 35--37
+ [1]
+Overfull \hbox (2.17041pt too wide) in paragraph at lines 37--39
 \T1/lmr/m/n/10.95 Dokument opi-suje stan-dardy sie-ciowe, we-dªug któ-rych zbu-
 do-wana jest usªuga
  []
 
-[1] (Projekt_Soap_dokumentacja.aux) ) 
+(C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+)
+(Mtgsklep_serwerImplService.xml
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+.
+
+(C:\Users\kuba2\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [2]
+[3] [4] [5]) [6]
+Overfull \hbox (19.17363pt too wide) in paragraph at lines 95--96
+\T1/lmr/m/n/10.95 Obiekty za-wie-ra-j¡ce in-for-ma-cje o da-nym sta-nie zwi¡-za
+-nym z dan¡ kart¡(zarówno
+ []
+
+
+Overfull \hbox (37.36374pt too wide) in paragraph at lines 100--101
+[]\T1/lmr/m/n/10.95 wartosc_razem- cena wszyst-kich kart w da-nym sta-nie brutt
+o (cena*na_stanie) 
+ []
+
+[7] [8] (komunikaty_zdjecia/zaloguj_req) (komunikaty_zdjecia/zaloguj_res)
+[9] (komunikaty_zdjecia/zwrocMagazyn_req) (komunikaty_zdjecia/zwrocMagazyn_res
+[10] [11]) (komunikaty_zdjecia/dodajDoKoszyka_req [12])
+(komunikaty_zdjecia/dodajDoKoszyka_res [13])
+Overfull \hbox (5.62697pt too wide) in paragraph at lines 302--303
+\T1/lmr/m/n/10.95 (na-zwa musi by¢ iden-tyczna z od-po-wied-ni¡ na-zw¡ w ma-ga-
+zy-nie). Usuwa
+ []
+
+(komunikaty_zdjecia/usunZKoszyka_req) (komunikaty_zdjecia/usunZKoszyka_res
+[14])
+Overfull \hbox (0.22475pt too wide) in paragraph at lines 354--356
+\T1/lmr/m/n/10.95 Operacja spraw-dza po-praw-no±¢ ko-szyka (spój-no±¢ z ma-ga-z
+y-nem), stan konta
+ []
+
+(komunikaty_zdjecia/zloz_zamowienie_req [15])
+(komunikaty_zdjecia/zloz_zamowienie_res) [16] (Projekt_Soap_dokumentacja.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4580 strings out of 479798
- 72239 string characters out of 2869706
- 362589 words of memory out of 3000000
- 21517 multiletter control sequences out of 15000+200000
- 571781 words of font info for 51 fonts, out of 3000000 for 9000
+ 6649 strings out of 479798
+ 101980 string characters out of 2869706
+ 865813 words of memory out of 3000000
+ 23520 multiletter control sequences out of 15000+200000
+ 581497 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,6n,85p,1056b,230s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/kuba2/AppData/Local/Programs/MiK
-TeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/Users/kuba2/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/lm/lmbx10.pfb><C:/Users/kuba2/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/lm/lmbx12.pfb><C:/Users/kuba2/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/lm/lmr10.pfb><C:/Users/kuba2/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/lm/lmr12.pfb><C:/Users/kuba2/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/lm/lmr17.pfb>
-Output written on Projekt_Soap_dokumentacja.pdf (2 pages, 139251 bytes).
+ 77i,6n,85p,1268b,1697s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/kuba2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{
+C:/Users/kuba2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/U
+sers/kuba2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/U
+sers/kuba2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/U
+sers/kuba2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Us
+ers/kuba2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Use
+rs/kuba2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/User
+s/kuba2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users
+/kuba2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/k
+uba2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb>
+Output written on Projekt_Soap_dokumentacja.pdf (17 pages, 281351 bytes).
 PDF statistics:
- 30 PDF objects out of 1000 (max. 8388607)
+ 95 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

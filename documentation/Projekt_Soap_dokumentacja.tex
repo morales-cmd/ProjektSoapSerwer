@@ -9,7 +9,9 @@
 %\usepackage{amssymb}
 \usepackage{subcaption}
 \usepackage{float}
+\usepackage{color}
 \usepackage{wrapfig}
+\usepackage{listings}
 \usepackage{graphicx} % Allows including images
 %\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 
@@ -35,9 +37,375 @@
 Dokument opisuje standardy sieciowe, według których zbudowana jest usługa oraz
 prezentuje przykładowy sposób jej używania.
 \section{Specyfikacja usługi Web Service}
+Usługa ,,Sklep Mtg'' zaimplementowana została jako usługa sieciowa (Web
+Service) z użyciem protokołu SOAP. \par
+Usługa dostępna jest przez protokół HTTP za pośrednictwem zaprojektowanego w HTML klienta.
+	\subsection{Adres usługi}
+	
+	\subsection{Specyfikacja wsdl}
+	 \lstset{
+		language=xml,
+		tabsize=3,
+		%frame=lines,
+		caption=Test,
+		label=code:sample,
+		frame=shadowbox,
+		%rulesepcolor=\color{gray},
+		xleftmargin=20pt,
+		framexleftmargin=15pt,
+		keywordstyle=\color{blue}\bf,
+		commentstyle=\color{green},
+		stringstyle=\color{red},
+		numbers=left,
+		numberstyle=\tiny,
+		numbersep=5pt,
+		breaklines=true,
+		showstringspaces=false,
+		basicstyle=\footnotesize,
+		emph={food,name,price},emphstyle={\color{magenta}}}
+\lstinputlisting{Mtgsklep_serwerImplService.xml}
+\subsection{Operacje usługi}
+Usługa zaplanowana jest do obsługi operacji:
+\begin{itemize}
+	\item zaloguj - zwraca informacje o koncie związanym z podanym loginem i hasłem
+	\item zwroc magazyn - zwraca informacje o aktualnym stanie magazynu sklepu
+	\item dodajDoKoszyka - ustawia w koszyku klienta podaną liczbę kopii danej karty
+	\item usunZKoszyka - usuwa z koszyka daną pozycję (wszystkie karty o danej nazwie)
+	\item zlozZamowienie - składa zamówienie (weryfikuje poprawność koszyka, aktualizuje magazyn i stan konta użytkownika, wysyła informacje o potwierdzeniu zamówienia)
+\end{itemize}
+\subsection{Zwracane obiekty}
+Szczegółowiej opisane zostaną tylko elementy budzące wątpliwości.
+\subsubsection{Konto}
+Obiekty zawierające informacje o zalogowanym użytkowniku, tzn.:
+\begin{itemize}
+	\item login (String)
+	\item haslo (String)
+	\item imie (String)
+	\item nazwisko (String)
+	\item stan\_konta (Float) - wirtualny stan konta służący do realizacji płatności
+	\item miasto (String)
+	\item kod\_pocztowy (String)
+	\item adres (String)
+	\item email (String)
+	\item numer\_telefonu (String)
+	\item ArrayList<Stan> koszyk- lista stanów w koszyku (karta+ liczba kopii karty+cena)
+	
+\end{itemize}
+\subsubsection{Stan}
+Obiekty zawierające informacje o danym stanie związanym z daną kartą(zarówno magazyn jak i koszyk klienta składają się z listy stanów ArrayList<Stan>), tzn.:
+\begin{itemize}
+	\item karta (Karta)- obiekt karta zawierający informacje o karcie
+	\item na\_stanie (int) -liczba kopii karty karta w danym stanie
+	\item cena (float)- cena pojedynczej kopii karty karta brutto
+	\item wartosc\_razem- cena wszystkich kart w danym stanie brutto (cena*na\_stanie)
+	
+\end{itemize}
+\subsubsection{Karta}
+Obiekty zawierające informacje o danej karcie, tzn.:
+\begin{itemize}
+	\item nazwa (String)
+	\item opis (String) - krótki opis karty: kolor, Set, rzadkość
+	\item ilustracja (Image)- grafika karty
 
 	
+\end{itemize}
+\subsubsection{Magazyn}
+Obiekty zawierające dane o stanie magazynu, tzn.:
+\begin{itemize}
+	\item ArrayList<Stan> lista\_st - lista stanów, z których złożony jest magazyn
+\end{itemize}
+
+\subsubsection{Potw\_zamowienia}
+Obiekty zawierające informacje o statusie złożonego zamówienia, tzn.:
+\begin{itemize}
+	\item kwota (Float)- kwota brutto w pln.
+	\item kwota\_netto(Float)- kwota netto w pln.
+	\item dane sklepu (Dane\_sklepu)- informacje o sprzedawcy.
+	\item czy\_zatwierdzono(Boolean) -True, jeśli zamówienie zostało pomyślnie złożone, False- jeśli nie zostało pomyślnie złożone
+	\item message (String)- komentarz dotyczący statusu zamówienia
+\end{itemize}
+\subsection{Specyfikacja wejście-wyjście opercji Web Service}
+By operacje działały poprawnie użytkownicy muszą trzymać się określonych niżej standardów w wysyłanych zapytaniach SOAP.
+\subsubsection{Operacja zaloguj}
+Dane wejściowe:
+\begin{itemize}
+	\item login (String)- login skojarzony z kontem
+	\item haslo (String)- hasło skojarzone z kontem
+\end{itemize}	
+Dane wyjściowe:
+\begin{itemize}
+	\item obiekt typu Konto skojarzony z podanymi loginem i hasłem
+	\item zwraca wyjątek, jeżeli w bazie serwera nie ma konta o loginie i haśle podanych w zapytaniu
+\end{itemize}
+\lstset{
+	language=xml,
+	tabsize=3,
+	%frame=lines,
+	caption=Przykładowy SOAP request operacji zaloguj,
+	label=code:sample,
+	frame=shadowbox,
+	%rulesepcolor=\color{gray},
+	xleftmargin=20pt,
+	framexleftmargin=15pt,
+	keywordstyle=\color{blue}\bf,
+	commentstyle=\color{green},
+	stringstyle=\color{red},
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	breaklines=true,
+	showstringspaces=false,
+	basicstyle=\footnotesize,
+	emph={food,name,price},emphstyle={\color{magenta}}}
+\lstinputlisting{komunikaty_zdjecia/zaloguj_req}
+
+\lstset{
+	language=xml,
+	tabsize=3,
+	%frame=lines,
+	caption=Przykładowy SOAP response operacji zaloguj,
+	label=code:sample,
+	frame=shadowbox,
+	%rulesepcolor=\color{gray},
+	xleftmargin=20pt,
+	framexleftmargin=15pt,
+	keywordstyle=\color{blue}\bf,
+	commentstyle=\color{green},
+	stringstyle=\color{red},
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	breaklines=true,
+	showstringspaces=false,
+	basicstyle=\footnotesize,
+	emph={food,name,price},emphstyle={\color{magenta}}}
+\lstinputlisting{komunikaty_zdjecia/zaloguj_res}
+\subsubsection{Operacja zwrocMagazyn}
+Dane wejściowe:
+\begin{itemize}
+	\item brak danych wejściowych
+\end{itemize}	
+Dane wyjściowe:
+\begin{itemize}
+	\item obiekt typu Magazyn zgodny z aktualnym stanem magazynu sklepu
+
+\end{itemize}
+\lstset{
+	language=xml,
+	tabsize=3,
+	%frame=lines,
+	caption=Przykładowy SOAP request operacji zwrocMagazyn,
+	label=code:sample,
+	frame=shadowbox,
+	%rulesepcolor=\color{gray},
+	xleftmargin=20pt,
+	framexleftmargin=15pt,
+	keywordstyle=\color{blue}\bf,
+	commentstyle=\color{green},
+	stringstyle=\color{red},
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	breaklines=true,
+	showstringspaces=false,
+	basicstyle=\footnotesize,
+	emph={food,name,price},emphstyle={\color{magenta}}}
+\lstinputlisting{komunikaty_zdjecia/zwrocMagazyn_req}
+
+\lstset{
+	language=xml,
+	tabsize=3,
+	%frame=lines,
+	caption=Przykładowy SOAP response operacji zwrocMagazyn,
+	label=code:sample,
+	frame=shadowbox,
+	%rulesepcolor=\color{gray},
+	xleftmargin=20pt,
+	framexleftmargin=15pt,
+	keywordstyle=\color{blue}\bf,
+	commentstyle=\color{green},
+	stringstyle=\color{red},
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	breaklines=true,
+	showstringspaces=false,
+	basicstyle=\footnotesize,
+	emph={food,name,price},emphstyle={\color{magenta}}}
+\lstinputlisting{komunikaty_zdjecia/zwrocMagazyn_res}
 
 
+\subsubsection{Operacja dodajDoKoszyka}
+Operacja wbrew nazwie nie dodaje pozycji do koszyka, a ustawia w koszyku podaną przez klienta pozycję w podanej liczbie sztuk.\newline
+Dane wejściowe:
+\begin{itemize}
+\item login (String)- login skojarzony z kontem, do którego koszyka się odnosimy
+\item haslo (String)- hasło skojarzone z kontem, do którego koszyka się odnosimy
+\item nazwa\_karty (String)- nazwa karty, którą chcemy włożyć do koszyka (nazwa musi być identyczna z odpowiednią nazwą w magazynie)
+\item liczba (int)- liczba kopii karty, którą chcemy ustawić w koszyku
+\end{itemize}	
+Dane wyjściowe:
+\begin{itemize}
+	\item obiekt typu Konto ze zaktualizowanym koszykiem
+	\item zwraca wyjątek, jeżeli w bazie serwera nie ma konta o loginie i haśle podanych w zapytaniu, lub nie ma karty o podanej nazwie w magazynie.
+\end{itemize}
+\lstset{
+	language=xml,
+	tabsize=3,
+	%frame=lines,
+	caption=Przykładowy SOAP request operacji dodajDoKoszyka,
+	label=code:sample,
+	frame=shadowbox,
+	%rulesepcolor=\color{gray},
+	xleftmargin=20pt,
+	framexleftmargin=15pt,
+	keywordstyle=\color{blue}\bf,
+	commentstyle=\color{green},
+	stringstyle=\color{red},
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	breaklines=true,
+	showstringspaces=false,
+	basicstyle=\footnotesize,
+	emph={food,name,price},emphstyle={\color{magenta}}}
+\lstinputlisting{komunikaty_zdjecia/dodajDoKoszyka_req}
+
+\lstset{
+	language=xml,
+	tabsize=3,
+	%frame=lines,
+	caption=Przykładowy SOAP response operacji dodajDoKoszyka,
+	label=code:sample,
+	frame=shadowbox,
+	%rulesepcolor=\color{gray},
+	xleftmargin=20pt,
+	framexleftmargin=15pt,
+	keywordstyle=\color{blue}\bf,
+	commentstyle=\color{green},
+	stringstyle=\color{red},
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	breaklines=true,
+	showstringspaces=false,
+	basicstyle=\footnotesize,
+	emph={food,name,price},emphstyle={\color{magenta}}}
+\lstinputlisting{komunikaty_zdjecia/dodajDoKoszyka_res}
+
+\subsubsection{Operacja usunZKoszyka}
+Operacja usuwa podaną pozycję z koszyka podanego konta.\newline
+Dane wejściowe:
+\begin{itemize}
+	\item login (String)- login skojarzony z kontem, do którego koszyka się odnosimy
+	\item haslo (String)- hasło skojarzone z kontem, do którego koszyka się odnosimy
+	\item nazwa\_karty (String)- nazwa karty, którą chcemy usunąć z koszyka (nazwa musi być identyczna z odpowiednią nazwą w magazynie). Usuwa całą pozycję (wsystkie sztuki).
+
+\end{itemize}	
+Dane wyjściowe:
+\begin{itemize}
+	\item obiekt typu Konto ze zaktualizowanym koszykiem
+	\item zwraca wyjątek, jeżeli w bazie serwera nie ma konta o loginie i haśle podanych w zapytaniu, lub nie ma karty o podanej nazwie w koszyku.
+\end{itemize}
+\lstset{
+	language=xml,
+	tabsize=3,
+	%frame=lines,
+	caption=Przykładowy SOAP request operacji usunZKoszyka,
+	label=code:sample,
+	frame=shadowbox,
+	%rulesepcolor=\color{gray},
+	xleftmargin=20pt,
+	framexleftmargin=15pt,
+	keywordstyle=\color{blue}\bf,
+	commentstyle=\color{green},
+	stringstyle=\color{red},
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	breaklines=true,
+	showstringspaces=false,
+	basicstyle=\footnotesize,
+	emph={food,name,price},emphstyle={\color{magenta}}}
+\lstinputlisting{komunikaty_zdjecia/usunZKoszyka_req}
+
+\lstset{
+	language=xml,
+	tabsize=3,
+	%frame=lines,
+	caption=Przykładowy SOAP response operacji usunZKoszyka,
+	label=code:sample,
+	frame=shadowbox,
+	%rulesepcolor=\color{gray},
+	xleftmargin=20pt,
+	framexleftmargin=15pt,
+	keywordstyle=\color{blue}\bf,
+	commentstyle=\color{green},
+	stringstyle=\color{red},
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	breaklines=true,
+	showstringspaces=false,
+	basicstyle=\footnotesize,
+	emph={food,name,price},emphstyle={\color{magenta}}}
+\lstinputlisting{komunikaty_zdjecia/usunZKoszyka_res}
+\subsubsection{Operacja zlozZamowienie}
+Operacja sprawdza poprawność koszyka (spójność z magazynem), stan konta użytkownika i zwraca potwierdzenie transakcji oraz aktualizuje stan magazynu i opróżnia koszyk.\newline
+Dane wejściowe:
+\begin{itemize}
+	\item login (String)- login skojarzony z kontem, do którego koszyka się odnosimy
+	\item haslo (String)- hasło skojarzone z kontem, do którego koszyka się odnosimy
+	
+\end{itemize}	
+Dane wyjściowe:
+\begin{itemize}
+	\item obiekt typu Potw\_zamowienia z wszelkimi informacjami dotyczącymi transakcji
+	\item zwraca wyjątek, jeżeli w bazie serwera nie ma konta o loginie i haśle podanych w zapytaniu.
+	\item jeżeli zamówienie nie zostało potwierdzone, wtedy w potwierdzeniu zwracane jest czy\_zatwierdzono = False i komentarz w polu message.
+\end{itemize}
+\lstset{
+	language=xml,
+	tabsize=3,
+	%frame=lines,
+	caption=Przykładowy SOAP request operacji zlozZamowienie,
+	label=code:sample,
+	frame=shadowbox,
+	%rulesepcolor=\color{gray},
+	xleftmargin=20pt,
+	framexleftmargin=15pt,
+	keywordstyle=\color{blue}\bf,
+	commentstyle=\color{green},
+	stringstyle=\color{red},
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	breaklines=true,
+	showstringspaces=false,
+	basicstyle=\footnotesize,
+	emph={food,name,price},emphstyle={\color{magenta}}}
+\lstinputlisting{komunikaty_zdjecia/zloz_zamowienie_req}
+
+\lstset{
+	language=xml,
+	tabsize=3,
+	%frame=lines,
+	caption=Przykładowy SOAP response operacji zlozZamowienie,
+	label=code:sample,
+	frame=shadowbox,
+	%rulesepcolor=\color{gray},
+	xleftmargin=20pt,
+	framexleftmargin=15pt,
+	keywordstyle=\color{blue}\bf,
+	commentstyle=\color{green},
+	stringstyle=\color{red},
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	breaklines=true,
+	showstringspaces=false,
+	basicstyle=\footnotesize,
+	emph={food,name,price},emphstyle={\color{magenta}}}
+\lstinputlisting{komunikaty_zdjecia/zloz_zamowienie_res}
 
 \end{document}

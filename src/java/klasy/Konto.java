@@ -14,6 +14,8 @@ import java.util.ArrayList;
 public class Konto {
     public String login;
     public String haslo;
+    public String imie;
+    public String nazwisko;
     public float stan_konta;
     public String miasto;
     public String kod_pocztowy;
@@ -21,7 +23,7 @@ public class Konto {
     public String email;
     public String numer_telefonu;
     public ArrayList<Stan> koszyk;
-    public Konto (String login,String haslo, float stan_konta, String miasto, String kod_pocztowy,String adres,String email,String numer_telefonu){
+    public Konto (String login,String haslo, float stan_konta, String miasto, String kod_pocztowy,String adres,String email,String numer_telefonu,String imie,String nazwisko){
         this.login=login;
         this.haslo=haslo;
         this.stan_konta=stan_konta;
@@ -31,6 +33,8 @@ public class Konto {
         this.email=email;
         this.numer_telefonu=numer_telefonu;
         this.koszyk= new ArrayList<Stan>();
+        this.imie=imie;
+        this.nazwisko=nazwisko;
 }
     public Stan zwroc_stan(String name) throws Exception
     {

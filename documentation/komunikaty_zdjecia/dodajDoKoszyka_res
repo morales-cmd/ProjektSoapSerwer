@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body>
+      <ns2:dodaj_do_koszykaResponse xmlns:ns2="http://klasy/">
+         <return>
+            <login>Lukasz</login>
+            <haslo>Kosmaty</haslo>
+            <imie>Lukasz</imie>
+            <nazwisko>Kosmaty</nazwisko>
+            <stan_konta>566.45</stan_konta>
+            <miasto>Bialystok</miasto>
+            <kod_pocztowy>15-888</kod_pocztowy>
+            <adres>ul. szkolna 17</adres>
+            <email>oookosmaty@gmail.com</email>
+            <numer_telefonu>666662222</numer_telefonu>
+            <koszyk>
+               <karta>
+                  <nazwa>Extinction_Event</nazwa>
+                  <opis>Kolor: czarny; set: Ikoria, Lair of Behemoths; rzadkosc: rare</opis>
+                  <ilustracja>
+                     <xop:Include href="cid:ca80dfab-5900-426e-9802-a9499384a0be@example.jaxws.sun.com" xmlns:xop="http://www.w3.org/2004/08/xop/include"/>
+                  </ilustracja>
+               </karta>
+               <na_stanie>5</na_stanie>
+               <cena>6.83</cena>
+               <wartosc_razem>34.15</wartosc_razem>
+            </koszyk>
+         </return>
+      </ns2:dodaj_do_koszykaResponse>
+   </S:Body>
+</S:Envelope>

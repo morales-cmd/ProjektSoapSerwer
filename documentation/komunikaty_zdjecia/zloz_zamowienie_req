@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:klas="http://klasy/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <klas:zloz_zamowienie>
+         <!--Optional:-->
+         <arg0>Lukasz</arg0>
+         <!--Optional:-->
+         <arg1>Kosmaty</arg1>
+      </klas:zloz_zamowienie>
+   </soapenv:Body>
+</soapenv:Envelope>

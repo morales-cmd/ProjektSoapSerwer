@@ -10,12 +10,16 @@ import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
+import javax.xml.ws.BindingType;
+import javax.xml.ws.soap.MTOM;
+import javax.xml.ws.soap.SOAPBinding;
 
 
 /**
  *
  * @author kuba2108
  */
+
 public class Karta {
 public String nazwa;
 public String opis;

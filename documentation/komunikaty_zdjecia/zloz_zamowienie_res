@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body>
+      <ns2:zloz_zamowienieResponse xmlns:ns2="http://klasy/">
+         <return>
+            <kwota>34.15</kwota>
+            <kwota_netto>27.76</kwota_netto>
+            <dane_sklepu>
+               <adres>Boboli 10</adres>
+               <nazwa>Znowu trzeba w magica grac.Magiaaa!</nazwa>
+               <miasto>Bialystok</miasto>
+               <kod_pocztowy>15-431</kod_pocztowy>
+               <email>Magiaaa@gmail.com</email>
+               <NIP>68830299831</NIP>
+               <wlasciciel>Pawel Roszkowski</wlasciciel>
+            </dane_sklepu>
+            <czy_zatwierdzono>true</czy_zatwierdzono>
+            <message>zamowienie potwierdzone</message>
+         </return>
+      </ns2:zloz_zamowienieResponse>
+   </S:Body>
+</S:Envelope>

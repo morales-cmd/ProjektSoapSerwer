@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body>
+      <ns2:usun_z_koszykaResponse xmlns:ns2="http://klasy/">
+         <return>
+            <login>Lukasz</login>
+            <haslo>Kosmaty</haslo>
+            <imie>Lukasz</imie>
+            <nazwisko>Kosmaty</nazwisko>
+            <stan_konta>566.45</stan_konta>
+            <miasto>Bialystok</miasto>
+            <kod_pocztowy>15-888</kod_pocztowy>
+            <adres>ul. szkolna 17</adres>
+            <email>oookosmaty@gmail.com</email>
+            <numer_telefonu>666662222</numer_telefonu>
+         </return>
+      </ns2:usun_z_koszykaResponse>
+   </S:Body>
+</S:Envelope>

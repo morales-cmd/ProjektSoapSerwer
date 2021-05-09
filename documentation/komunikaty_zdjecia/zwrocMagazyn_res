@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body>
+      <ns2:zwroc_magazynResponse xmlns:ns2="http://klasy/">
+         <return>
+            <lista_st>
+               <karta>
+                  <nazwa>Drannith_Stinger</nazwa>
+                  <opis>Kolor: czerwony; set: Ikoria, Lair of Behemoths; rzadkosc: common</opis>
+                  <ilustracja>
+                     <xop:Include href="cid:6ee14dda-65a6-4402-921d-c46c616077c6@example.jaxws.sun.com" xmlns:xop="http://www.w3.org/2004/08/xop/include"/>
+                  </ilustracja>
+               </karta>
+               <na_stanie>70</na_stanie>
+               <cena>0.89</cena>
+               <wartosc_razem>62.3</wartosc_razem>
+            </lista_st>
+            <lista_st>
+               <karta>
+                  <nazwa>Extinction_Event</nazwa>
+                  <opis>Kolor: czarny; set: Ikoria, Lair of Behemoths; rzadkosc: rare</opis>
+                  <ilustracja>
+                     <xop:Include href="cid:5596a57d-6e95-45df-a0b7-65be1d1075b6@example.jaxws.sun.com" xmlns:xop="http://www.w3.org/2004/08/xop/include"/>
+                  </ilustracja>
+               </karta>
+               <na_stanie>21</na_stanie>
+               <cena>6.83</cena>
+               <wartosc_razem>143.43</wartosc_razem>
+            </lista_st>
+            <lista_st>
+               <karta>
+                  <nazwa>Gemrazer</nazwa>
+                  <opis>Kolor: zielony; set: Ikoria, Lair of Behemoths; rzadkosc: rare</opis>
+                  <ilustracja>
+                     <xop:Include href="cid:804dd9f3-2ff5-41bf-b1ba-56731323d783@example.jaxws.sun.com" xmlns:xop="http://www.w3.org/2004/08/xop/include"/>
+                  </ilustracja>
+               </karta>
+               <na_stanie>18</na_stanie>
+               <cena>5.44</cena>
+               <wartosc_razem>97.92</wartosc_razem>
+            </lista_st>
+            <lista_st>
+               <karta>
+                  <nazwa>Luminous_Broodmoth</nazwa>
+                  <opis>Kolor: bialy; set: Ikoria, Lair of Behemoths; rzadkosc: mythic</opis>
+                  <ilustracja>
+                     <xop:Include href="cid:95d1d9c3-1e4e-4eee-91c2-c0a255af5077@example.jaxws.sun.com" xmlns:xop="http://www.w3.org/2004/08/xop/include"/>
+                  </ilustracja>
+               </karta>
+               <na_stanie>4</na_stanie>
+               <cena>8.99</cena>
+               <wartosc_razem>35.96</wartosc_razem>
+            </lista_st>
+            <lista_st>
+               <karta>
+                  <nazwa>Ominous_Seas</nazwa>
+                  <opis>Kolor: niebieski; set: Ikoria, Lair of Behemoths; rzadkosc: uncommon</opis>
+                  <ilustracja>
+                     <xop:Include href="cid:42b528f5-37bc-4925-a113-ebce0d35aa18@example.jaxws.sun.com" xmlns:xop="http://www.w3.org/2004/08/xop/include"/>
+                  </ilustracja>
+               </karta>
+               <na_stanie>43</na_stanie>
+               <cena>2.02</cena>
+               <wartosc_razem>86.86</wartosc_razem>
+            </lista_st>
+         </return>
+      </ns2:zwroc_magazynResponse>
+   </S:Body>
+</S:Envelope>

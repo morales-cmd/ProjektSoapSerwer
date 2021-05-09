@@ -1,5 +1,20 @@
 \babel@toc {polish}{}
 \contentsline {section}{\numberline {1}Wstęp}{1}{}%
 \contentsline {subsection}{\numberline {1.1}Przeznaczenie}{1}{}%
-\contentsline {subsection}{\numberline {1.2}Zakres}{1}{}%
-\contentsline {section}{\numberline {2}Specyfikacja usługi Web Service}{1}{}%
+\contentsline {subsection}{\numberline {1.2}Zakres}{2}{}%
+\contentsline {section}{\numberline {2}Specyfikacja usługi Web Service}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Adres usługi}{2}{}%
+\contentsline {subsection}{\numberline {2.2}Specyfikacja wsdl}{2}{}%
+\contentsline {subsection}{\numberline {2.3}Operacje usługi}{6}{}%
+\contentsline {subsection}{\numberline {2.4}Zwracane obiekty}{6}{}%
+\contentsline {subsubsection}{\numberline {2.4.1}Konto}{7}{}%
+\contentsline {subsubsection}{\numberline {2.4.2}Stan}{7}{}%
+\contentsline {subsubsection}{\numberline {2.4.3}Karta}{8}{}%
+\contentsline {subsubsection}{\numberline {2.4.4}Magazyn}{8}{}%
+\contentsline {subsubsection}{\numberline {2.4.5}Potw\_zamowienia}{8}{}%
+\contentsline {subsection}{\numberline {2.5}specyfikacja wejście-wyjście opercji Web Service}{8}{}%
+\contentsline {subsubsection}{\numberline {2.5.1}Operacja zaloguj}{8}{}%
+\contentsline {subsubsection}{\numberline {2.5.2}Operacja zwrocMagazyn}{9}{}%
+\contentsline {subsubsection}{\numberline {2.5.3}Operacja dodajDoKoszyka}{12}{}%
+\contentsline {subsubsection}{\numberline {2.5.4}Operacja usunZKoszyka}{14}{}%
+\contentsline {subsubsection}{\numberline {2.5.5}Operacja zlozZamowienie}{15}{}%

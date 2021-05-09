@@ -22,24 +22,26 @@ public class Lista_kont {
         Scanner odczyt = new Scanner( plik );
         while (odczyt.hasNext()){
             String login=odczyt.nextLine();
-            System.out.println(login);
+            //System.out.println(login);
             String haslo=odczyt.nextLine();
-            System.out.println(haslo);
+            //System.out.println(haslo);
+            String imie=odczyt.nextLine();
+            String nazwisko=odczyt.nextLine();
             String stan_konta=odczyt.nextLine();
-            System.out.println(stan_konta);
+            //System.out.println(stan_konta);
             String miasto=odczyt.nextLine();
-            System.out.println(miasto);
+            //System.out.println(miasto);
             String kod_pocztowy=odczyt.nextLine();
-            System.out.println(kod_pocztowy);
+            //System.out.println(kod_pocztowy);
             String adres=odczyt.nextLine();
-            System.out.println(adres);
+            //System.out.println(adres);
             String email=odczyt.nextLine();
-            System.out.println(email);
+            //System.out.println(email);
             String numer_telefonu=odczyt.nextLine();
-            System.out.println(numer_telefonu);
-            Konto konto=new Konto(login, haslo, Float.parseFloat(stan_konta),  miasto, kod_pocztowy,adres, email, numer_telefonu);
+            //System.out.println(numer_telefonu);
+            Konto konto=new Konto(login, haslo, Float.parseFloat(stan_konta),  miasto, kod_pocztowy,adres, email, numer_telefonu,imie,nazwisko);
             lista_kont.add(konto);
-            System.out.println("www");
+            //System.out.println("www");
     }
     }
        
