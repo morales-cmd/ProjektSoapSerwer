@@ -5,6 +5,8 @@
  */
 package klasy;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author kuba2108
@@ -15,6 +17,7 @@ public class Potw_zamowienia {
     public Dane_sklepu dane_sklepu;
     public Boolean czy_zatwierdzono;
     public String message;
+    public ArrayList<Stan> koszyk;
     public Potw_zamowienia(Boolean czy_zatwierdzono,String message)
     {
         this.czy_zatwierdzono=czy_zatwierdzono;

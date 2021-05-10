@@ -23,8 +23,9 @@ import javax.xml.ws.soap.SOAPBinding;
 
 @MTOM
 @WebService
-@HandlerChain(file="handler-chain.xml")
 @BindingType(value = SOAPBinding.SOAP11HTTP_MTOM_BINDING)
+@HandlerChain(file="handler-chain.xml")
+
 
 public class Mtgsklep_serwerImpl implements Mtgsklep_serwer{
     public Magazyn magazyn;
@@ -65,11 +66,12 @@ public class Mtgsklep_serwerImpl implements Mtgsklep_serwer{
     }
     private Potw_zamowienia finalizuj_zamowienie(ArrayList<Stan> zamowienie, Konto konto) throws Exception{
         float kwota= magazyn.aktualizuj_magazyn(zamowienie);
-        uzytkownicy.aktualizuj_stan_konta(kwota*(-1),konto.login,konto.haslo);
+        uzytkownicy.aktualizuj_stan_konta(kwota,konto.login,konto.haslo);
         Potw_zamowienia potw=new Potw_zamowienia(true,"zamowienie potwierdzone");
         potw.dane_sklepu=this.dane_sklepu;
         potw.kwota=kwota;
         potw.kwota_netto=(float) Math.round(kwota/1.23*100)/100;
+        potw.koszyk= new ArrayList<Stan>(zamowienie);
         return potw;
         
     }

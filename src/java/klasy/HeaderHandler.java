@@ -48,7 +48,12 @@ public class HeaderHandler implements SOAPHandler<SOAPMessageContext>{
         SOAPMessage soapMsg = context.getMessage();
         SOAPEnvelope soapEnv = soapMsg.getSOAPPart().getEnvelope();
             SOAPHeader soapHeader = soapEnv.getHeader();
+            SOAPBody soapBody=soapEnv.getBody();
                 
+                if(soapBody.getChildElements().next().toString().equals("[ns2:zaloguj: null]"))
+                {
+                    System.out.print("Someone just tried to log in.");
+                }
             //if no header, add one
         if (soapHeader == null){
                 soapHeader = soapEnv.addHeader();
@@ -57,12 +62,13 @@ public class HeaderHandler implements SOAPHandler<SOAPMessageContext>{
          }
         else{
         //System.out.print(soapHeader);
-        System.out.print(soapEnv.getHeader());
+        System.out.print(soapHeader);
         }
         
              //Get client mac address from SOAP header
          
-                
+              
+            
            //tracking
            soapMsg.writeTo(System.out);
 
@@ -75,24 +81,30 @@ public class HeaderHandler implements SOAPHandler<SOAPMessageContext>{
         }
 //    else{
 //        try{
+//           
 //        SOAPMessage soapMsg = context.getMessage();
 //            SOAPEnvelope soapEnv = soapMsg.getSOAPPart().getEnvelope();
 //            SOAPHeader soapHeader = soapEnv.getHeader();
+//            SOAPBody soapBody=soapEnv.getBody();
+//                System.out.print(soapBody.getChildElements().next().toString());
+//               if( soapBody.getChildElements().next().toString().equals("[ns2:zalogujResponse: null]")){
 //                
 //            //if no header, add one
-//            if (soapHeader == null){
-//            	soapHeader = soapEnv.addHeader();
-//            }
-//
+////            if (soapHeader == null){
+////            	soapHeader = soapEnv.addHeader();
+////            }
 //            //get mac address
+//            System.out.print("oks");
 //            Dane_sklepu dk= new Dane_sklepu();
 //            //add a soap header, name as "mac address"
 //            QName qname = new QName("http://25.76.141.122:8080/ProjektSoapSerwer/", "Dane_firmy");
 //            SOAPHeaderElement soapHeaderElement = soapHeader.addHeaderElement(qname);
 //
-//            //soapHeaderElement.setActor(SOAPConstants.URI_SOAP_ACTOR_NEXT);
+//            soapHeaderElement.setActor(SOAPConstants.URI_SOAP_ACTOR_NEXT);
 //            soapHeaderElement.addTextNode(dk.nazwa+"\n"+dk.NIP+"\n"+dk.adres+"\n"+dk.kod_pocztowy+" "+dk.miasto+"\n"+dk.wlasciciel);
 //            soapMsg.saveChanges();
+//               }
+//            
 //            //tracking
 //           //soapMsg.writeTo(System.out);
 //
@@ -100,10 +112,10 @@ public class HeaderHandler implements SOAPHandler<SOAPMessageContext>{
 //       }catch(SOAPException e){
 //        System.err.println(e);
 //       }
-////        catch(IOException e){
-////        System.err.println(e);
-////       }
-//        
+//        catch(IOException e){
+//        System.err.println(e);
+//       }
+        
 //    }
 
       //continue other handler chain

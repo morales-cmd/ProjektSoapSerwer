@@ -17,8 +17,9 @@ import javax.jws.soap.SOAPBinding;
  * @author kuba2108
  */
 @WebService
-@HandlerChain(file="handler-chain.xml")
 @SOAPBinding(style = SOAPBinding.Style.RPC)
+@HandlerChain(file="handler-chain.xml")
+
 public interface Mtgsklep_serwer {
         @WebMethod Magazyn zwroc_magazyn();
         @WebMethod Potw_zamowienia zloz_zamowienie(String login, String haslo)throws  Exception;;
